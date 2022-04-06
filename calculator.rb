@@ -133,6 +133,6 @@ class Calculator
 
 end
 
-a = Calculator.new
+calculator = Calculator.new
 
-puts a.main
+calculator.main

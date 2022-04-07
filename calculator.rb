@@ -40,8 +40,7 @@ class Calculator
         case option
 
         when 1
-            sum_operation
-            return
+            return sum_operation
         when 2
             return sub_operation
         when 3
@@ -64,21 +63,18 @@ class Calculator
         number = enter_number("Insira um número para somar #{@result}: ")
 
         @result += number
-        return @result
     end
 
     def sub_operation
         number = enter_number("Insira um número para subtrair #{@result}: ")
 
         @result -= number
-        return @result
     end
 
     def mult_operation
         number = enter_number("Insira um número para multiplicar #{@result}: ")
 
         @result *= number
-        return @result
     end
 
     def div_operation
@@ -90,14 +86,12 @@ class Calculator
         end
 
         @result = @result / number
-        return @result
     end
 
     def percentage_operation
         percentage = enter_number("Insira um número para calcular a porcentagem de #{@result}: ")
 
         @result = @result * (percentage / 100)
-        return @result
     end
 
     def show_result

@@ -40,22 +40,23 @@ class Calculator
         case option
 
         when 1
-            return sum_operation
+            sum_operation
         when 2
-            return sub_operation
+            sub_operation
         when 3
-            return mult_operation
+            mult_operation
         when 4
-            return div_operation
+            div_operation
         when 5
-            return show_result
+            show_result
         when 6
-            return percentage_operation
+            percentage_operation
         when 7
             puts "Programa finalizado..."
             return
         else
-            return "[ERRO]"
+            puts "[ERRO]"
+            return
         end
     end
 
@@ -95,7 +96,7 @@ class Calculator
     end
 
     def show_result
-        puts @result
+        puts "O resultado atual é: #{@result}"
     end
 
     def enter_menu_option(exit_command)
@@ -114,17 +115,15 @@ class Calculator
         puts message
 
         while true
-            number = gets
-
             begin
-                Float(number)
-                return Float(number)
+                number = Float(gets)
+
+                return number
             rescue
                 puts "Número inválido, tente novamente..."
             end
         end
     end
-
 end
 
 calculator = Calculator.new

@@ -6,6 +6,7 @@ class Calculator
 
     def main
         puts "Seja bem-vindo a Calculadora Ruby..."
+        first_action
         execute
     end
 
@@ -58,6 +59,10 @@ class Calculator
             puts "[ERRO]"
             return
         end
+    end
+
+    def first_action
+        @result = enter_number("Insira o primeiro número: ")
     end
 
     def sum_operation

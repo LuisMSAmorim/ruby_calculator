@@ -10,7 +10,7 @@ class Calculator
         execute
     end
 
-    private 
+    private
 
     def execute
         exit_command = 9
@@ -55,7 +55,7 @@ class Calculator
         when 6
             factorial_operation
         when 7
-            square_root
+            square_root_operation
         when 8
             show_result
         when 9
@@ -120,7 +120,7 @@ class Calculator
         end
     end
 
-    def square_root
+    def square_root_operation
         if @result < 0
             puts "Operação inválida..."
             return

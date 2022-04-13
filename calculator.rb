@@ -107,6 +107,11 @@ class Calculator
     end
 
     def factorial_operation
+        if @result == 0
+            puts "Operação inválida..."
+            return
+        end
+
         count = @result - 1
 
         while count != 1
@@ -117,7 +122,7 @@ class Calculator
 
     def square_root
         if @result < 0
-            puts "Número inválido..."
+            puts "Operação inválida..."
             return
         end
 

@@ -13,7 +13,7 @@ class Calculator
     private 
 
     def execute
-        exit_command = 7
+        exit_command = 9
         option = 0
 
         while option != exit_command
@@ -32,9 +32,11 @@ class Calculator
         puts "2- Subtrair"
         puts "3- Multiplicar"
         puts "4- Dividir"
-        puts "5- Resultado"
-        puts "6- Porcentagem"
-        puts "7- Sair"
+        puts "5- Porcentagem"
+        puts "6- Fatorial"
+        puts "7- Raíz quadrada"
+        puts "8- Resultado"
+        puts "9- Sair"
     end
 
     def execute_selected_action(option)
@@ -49,10 +51,14 @@ class Calculator
         when 4
             div_operation
         when 5
-            show_result
-        when 6
             percentage_operation
+        when 6
+            factorial_operation
         when 7
+            square_root
+        when 8
+            show_result
+        when 9
             puts "Programa finalizado..."
             return
         else
@@ -98,6 +104,24 @@ class Calculator
         percentage = enter_number("Insira um número para calcular a porcentagem de #{@result}: ")
 
         @result = @result * (percentage / 100)
+    end
+
+    def factorial_operation
+        count = @result - 1
+
+        while count != 1
+            @result *= count
+            count -= 1
+        end
+    end
+
+    def square_root
+        if @result < 0
+            puts "Número inválido..."
+            return
+        end
+
+        @result = Math.sqrt(@result)
     end
 
     def show_result

@@ -107,17 +107,7 @@ class Calculator
     end
 
     def factorial_operation
-        if @result == 0
-            puts "Operação inválida..."
-            return
-        end
-
-        count = @result - 1
-
-        while count != 1
-            @result *= count
-            count -= 1
-        end
+        @result = (1..@result).inject(:*) || 1
     end
 
     def square_root_operation
